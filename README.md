@@ -1,2 +1,2 @@
-# trajectory-similarity-project
+# Trajectory Similarity Project
 UQ Trajectory Distance Measure/Similarity Project
