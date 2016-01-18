@@ -1,0 +1,173 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repo/dketsurvey/!svn/ver/99/demoTarjectorySurvey/src/java/edu/uq/itee/distance
+END
+EDRDistanceCalculator.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repo/dketsurvey/!svn/ver/101/demoTarjectorySurvey/src/java/edu/uq/itee/distance/EDRDistanceCalculator.java
+END
+STLCSSDistanceCalculator.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repo/dketsurvey/!svn/ver/98/demoTarjectorySurvey/src/java/edu/uq/itee/distance/STLCSSDistanceCalculator.java
+END
+EuclideanDistanceForMultiDimensionTimeSeriesCalculator.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/repo/dketsurvey/!svn/ver/101/demoTarjectorySurvey/src/java/edu/uq/itee/distance/EuclideanDistanceForMultiDimensionTimeSeriesCalculator.java
+END
+PolygonNew.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repo/dketsurvey/!svn/ver/85/demoTarjectorySurvey/src/java/edu/uq/itee/distance/PolygonNew.java
+END
+PDTWDistanceCalculator.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repo/dketsurvey/!svn/ver/45/demoTarjectorySurvey/src/java/edu/uq/itee/distance/PDTWDistanceCalculator.java
+END
+TIDDistanceCalculator.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repo/dketsurvey/!svn/ver/97/demoTarjectorySurvey/src/java/edu/uq/itee/distance/TIDDistanceCalculator.java
+END
+FrechetDistanceCalculator.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repo/dketsurvey/!svn/ver/98/demoTarjectorySurvey/src/java/edu/uq/itee/distance/FrechetDistanceCalculator.java
+END
+STLCSSWithSigmoidDistanceCalculator.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repo/dketsurvey/!svn/ver/98/demoTarjectorySurvey/src/java/edu/uq/itee/distance/STLCSSWithSigmoidDistanceCalculator.java
+END
+LIPDistanceCalculator.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repo/dketsurvey/!svn/ver/85/demoTarjectorySurvey/src/java/edu/uq/itee/distance/LIPDistanceCalculator.java
+END
+GetEpsilon.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repo/dketsurvey/!svn/ver/53/demoTarjectorySurvey/src/java/edu/uq/itee/distance/GetEpsilon.java
+END
+ERPDistanceCalculator.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repo/dketsurvey/!svn/ver/101/demoTarjectorySurvey/src/java/edu/uq/itee/distance/ERPDistanceCalculator.java
+END
+POIOnRoadNetworkDistanceCaculator.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repo/dketsurvey/!svn/ver/15/demoTarjectorySurvey/src/java/edu/uq/itee/distance/POIOnRoadNetworkDistanceCaculator.java
+END
+OWDDistanceCalculator.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repo/dketsurvey/!svn/ver/55/demoTarjectorySurvey/src/java/edu/uq/itee/distance/OWDDistanceCalculator.java
+END
+PointDistanceCalculator.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repo/dketsurvey/!svn/ver/3/demoTarjectorySurvey/src/java/edu/uq/itee/distance/PointDistanceCalculator.java
+END
+EuclideanDistanceCalculator.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repo/dketsurvey/!svn/ver/15/demoTarjectorySurvey/src/java/edu/uq/itee/distance/EuclideanDistanceCalculator.java
+END
+test.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/dketsurvey/!svn/ver/3/demoTarjectorySurvey/src/java/edu/uq/itee/distance/test.java
+END
+STLIPDistanceCalculator.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repo/dketsurvey/!svn/ver/70/demoTarjectorySurvey/src/java/edu/uq/itee/distance/STLIPDistanceCalculator.java
+END
+SigmoidDistanceCalculator.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repo/dketsurvey/!svn/ver/70/demoTarjectorySurvey/src/java/edu/uq/itee/distance/SigmoidDistanceCalculator.java
+END
+LCSSForMultiDimensionDistanceCalculator.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/repo/dketsurvey/!svn/ver/3/demoTarjectorySurvey/src/java/edu/uq/itee/distance/LCSSForMultiDimensionDistanceCalculator.java
+END
+DTWDistanceCalculator.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repo/dketsurvey/!svn/ver/102/demoTarjectorySurvey/src/java/edu/uq/itee/distance/DTWDistanceCalculator.java
+END
+ThreeDLine.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repo/dketsurvey/!svn/ver/61/demoTarjectorySurvey/src/java/edu/uq/itee/distance/ThreeDLine.java
+END
+STEDDistanceCalculator.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repo/dketsurvey/!svn/ver/102/demoTarjectorySurvey/src/java/edu/uq/itee/distance/STEDDistanceCalculator.java
+END
+EuclideanDistanceForOneDimensionTimeSeriesCalculator.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/repo/dketsurvey/!svn/ver/15/demoTarjectorySurvey/src/java/edu/uq/itee/distance/EuclideanDistanceForOneDimensionTimeSeriesCalculator.java
+END
+Line.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repo/dketsurvey/!svn/ver/97/demoTarjectorySurvey/src/java/edu/uq/itee/distance/Line.java
+END
+Polygon.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/dketsurvey/!svn/ver/59/demoTarjectorySurvey/src/java/edu/uq/itee/distance/Polygon.java
+END
+LCSSDistanceCalculator.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repo/dketsurvey/!svn/ver/102/demoTarjectorySurvey/src/java/edu/uq/itee/distance/LCSSDistanceCalculator.java
+END
+Point.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/dketsurvey/!svn/ver/101/demoTarjectorySurvey/src/java/edu/uq/itee/distance/Point.java
+END
+SequenceDistanceCalculator.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repo/dketsurvey/!svn/ver/3/demoTarjectorySurvey/src/java/edu/uq/itee/distance/SequenceDistanceCalculator.java
+END

@@ -1,0 +1,18 @@
+package edu.uq.itee.distance;
+
+public class EuclideanDistanceCalculator implements PointDistanceCalculator {
+
+	@Override
+	public double GetDistance(Point x, Point y) {
+		assert(x.dimension == y.dimension);
+		
+		double sum = 0;
+		for (int i = 0; i < x.dimension; ++i) {
+			double dif = x.coordinate[i] - y.coordinate[i];
+			sum += dif * dif;
+		}
+		
+		return Math.sqrt(sum);
+	}
+
+}

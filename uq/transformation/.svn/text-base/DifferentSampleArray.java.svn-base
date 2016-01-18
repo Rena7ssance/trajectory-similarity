@@ -1,0 +1,174 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package edu.uq.itee.transformation;
+
+import edu.uq.itee.distance.Line;
+import edu.uq.itee.distance.Point;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ *
+ * @author uqhsu1
+ */
+public class DifferentSampleArray {
+    
+    Point[] p;
+    ArrayList<Line> l;
+    
+    public DifferentSampleArray(){
+        this.generatePointArray();
+    }
+    
+    public ArrayList<Point> getPointArray(int timeInterval){
+        ArrayList<Point> result= new ArrayList<Point>();
+        
+        
+        //double pieceSize=100/l.size();
+           
+            for(int i=0;i<l.size();i++){
+                double piece=(l.get(i).endPoint.timeLong-l.get(i).startPoint.timeLong)/timeInterval;
+                for(int j=0;j<piece;j++){
+                    
+                    Point pp = l.get(i).getPointByTime(j*timeInterval);
+                    result.add(pp);
+                    //System.out.println(temp[0]+"$$"+temp[1]);
+                }               
+            }
+           
+            
+            
+            return result;
+    }
+    
+    
+    private void generatePointArray(){
+        ArrayList<Point> result=new ArrayList<Point>();
+       
+            int index=((int)(3+Math.random()*4));
+            
+             p=new Point[index];
+             for(int i=0;i<index;i++){
+                 if(i==0){
+                 p[i]=new Point(new double[]{0,0}, 0);
+                        
+                 }else{
+                  p[i]=new Point(new double[]{p[i-1].coordinate[0]+Math.random()*50+1,p[i-1].coordinate[1]+(Math.random()-0.5)*50},(long)(p[i-1].timeLong+(Math.random()+1)*100000));   
+                 }                                         
+             }
+            
+           
+            l=new ArrayList<Line>();
+            for(int i=0;i<p.length-1;i++){
+                Line ll=new Line(p[i],p[i+1]);
+                l.add(ll);
+            }         
+            
+    }
+    
+    
+    private ArrayList<List<Double>> generateArray(){
+        ArrayList<List<Double>> result=new ArrayList<List<Double>>();
+        /*if(choose==1){
+            Point[] p=new Point[5];
+            p[0]=new Point(new double[]{0,0});
+            p[1]=new Point(new double[]{20,30});
+            p[2]=new Point(new double[]{50,20});
+            p[3]=new Point(new double[]{60,80});
+            p[4]=new Point(new double[]{100,60});
+           
+            ArrayList<Line> l=new ArrayList<Line>();
+            for(int i=0;i<p.length-1;i++){
+                Line ll=new Line(p[i],p[i+1]);
+                l.add(ll);
+            }
+           
+            double pieceSize=100/l.size();
+           
+            for(int i=0;i<l.size();i++){
+                for(int j=0;j<pieceSize;j++){
+                    double[] temp=new double[2];
+                    temp[0]=(j*(l.get(i).endPoint.coordinate[0]-l.get(i).startPoint.coordinate[0])/pieceSize)+l.get(i).startPoint.coordinate[0];
+                    temp[1]=l.get(i).getYByX(temp[0]);
+                    List<Double> t = new ArrayList<Double>();
+                    t.add(temp[0]);
+                    t.add(temp[1]);
+                    result.add(t);
+                    //System.out.println(temp[0]+"$$"+temp[1]);
+                }               
+            }
+           
+            return result;
+        }else if(choose==2){
+            Point[] p=new Point[4];
+            p[0]=new Point(new double[]{0,0});
+            p[1]=new Point(new double[]{40,40});
+            p[2]=new Point(new double[]{60,30});
+            p[3]=new Point(new double[]{100,60});
+            //p[4]=new Point(new double[]{100,60});
+           
+            ArrayList<Line> l=new ArrayList<Line>();
+            for(int i=0;i<p.length-1;i++){
+                Line ll=new Line(p[i],p[i+1]);
+                l.add(ll);
+            }
+           
+            double pieceSize=100/l.size();
+           
+            for(int i=0;i<l.size();i++){
+                for(int j=0;j<pieceSize;j++){
+                    double[] temp=new double[2];
+                    temp[0]=j*(l.get(i).endPoint.coordinate[0]-l.get(i).startPoint.coordinate[0])/pieceSize+l.get(i).startPoint.coordinate[0];
+                    temp[1]=l.get(i).getYByX(temp[0]);
+                   
+                    List<Double> t = new ArrayList<Double>();
+                    t.add(temp[0]);
+                    t.add(temp[1]);
+                    result.add(t);
+                    //System.out.println(temp[0]+'\t'+temp[1]);
+                }               
+            }
+           
+            return result;
+        }else{*/
+            int index=((int)(3+Math.random()*4));
+            
+             Point[] p=new Point[index];
+             for(int i=0;i<index;i++){
+                 if(i==0){
+                 p[i]=new Point(new double[]{0,0});
+                        
+                 }else{
+                  p[i]=new Point(new double[]{p[i-1].coordinate[0]+Math.random()*50,p[i-1].coordinate[1]+(Math.random()-0.5)*100});   
+                 }                                         
+             }
+            
+           
+            ArrayList<Line> l=new ArrayList<Line>();
+            for(int i=0;i<p.length-1;i++){
+                Line ll=new Line(p[i],p[i+1]);
+                l.add(ll);
+            }
+           
+            double pieceSize=100/l.size();
+           
+            for(int i=0;i<l.size();i++){
+                for(int j=0;j<pieceSize;j++){
+                    double[] temp=new double[2];
+                    temp[0]=(j*(l.get(i).endPoint.coordinate[0]-l.get(i).startPoint.coordinate[0])/pieceSize)+l.get(i).startPoint.coordinate[0];
+                    temp[1]=l.get(i).getYByX(temp[0]);
+                    List<Double> t = new ArrayList<Double>();
+                    t.add(temp[0]);
+                    t.add(temp[1]);
+                    result.add(t);
+                    //System.out.println(temp[0]+"$$"+temp[1]);
+                }               
+            }
+           
+            return result;
+        
+    }
+    
+}

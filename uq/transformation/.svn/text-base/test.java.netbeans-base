@@ -1,0 +1,318 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package edu.uq.itee.transformation;
+
+import edu.uq.itee.distance.Point;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import edu.uq.itee.transformation.RamerDouglasPeuchkerAlgorithm;
+import java.util.ArrayList;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+/**
+ *
+ * @author uqhsu1
+ */
+public class test {
+    public static void main(String[] args){
+        
+        target4();
+        /*RamerDouglasPeuchkerAlgorithm r=new RamerDouglasPeuchkerAlgorithm(0.005);
+        try{
+        FileReader reader=new FileReader("D:\\Dropbox\\similartiy function survey\\high sample trajectory\\HighSampleClean\\ 1 8613436732496 3.txt");
+            FileWriter writer=new FileWriter("D:\\Dropbox\\similartiy function survey\\high sample trajectory\\skeleton\\ 1 8613436732496 3.txt");
+            BufferedReader bf=new BufferedReader(reader);
+            BufferedWriter bw=new BufferedWriter(writer);
+            String s="";
+            ArrayList<Point> list=new ArrayList<Point>();
+            while((s=bf.readLine())!=null){
+                String[] segs=s.split(",");
+                assert(segs.length==4);
+                double x=Double.valueOf(segs[1]);
+                double y=Double.valueOf(segs[2]);
+                double[] xy=new double[]{x,y};
+                Point p=new Point(xy,segs[0]);
+                list.add(p);
+            }
+            ArrayList<Point> key=r.getKeyPointArrayList(list);
+            for(int i=0;i<key.size();i++){
+                bw.write(key.get(i).timeString+","+key.get(i).coordinate[0]+","+key.get(i).coordinate[1]+"\n");
+            }
+            bw.flush();
+            writer.flush();
+            bw.close();
+            writer.close();
+           D:\my file\skeleton0005 
+        }catch(Exception e){
+            
+        }*/
+    }
+    
+    public static void target4(){
+        File father1=new File("D:\\Dropbox\\one day one photo\\");
+        //RamerDouglasPeuchkerAlgorithm r=new RamerDouglasPeuchkerAlgorithm(0.0005);
+        
+        File[] sun1=father1.listFiles();
+        int month=2;
+        int day=23;
+        int year=2012;
+        for(int i=0;i<sun1.length;i++){            
+        
+            
+       
+            
+            
+            
+            String name="";
+            if(day<10&&month<10){
+                name=year+"-0"+month+"-0"+day;
+            }else if(day<10){
+                name=year+"-"+month+"-0"+day;
+                
+            }else if(month<10){
+                name=year+"-0"+month+"-"+day;
+            }else{
+                name=year+"-"+month+"-"+day;
+            }
+            
+            
+        String c=sun1[i].getParent(); 
+        File mm=new File("D:\\Dropbox\\one day one photo\\"+name+".jpg"); 
+        if(sun1[i].renameTo(mm)) 
+        {
+          
+         System.out.println("修改成功!"+name);
+         
+        } 
+
+            
+            
+
+        
+        if(month==2){
+            if(day==29){
+                month++;
+                day=1;
+            }else{
+                day++;
+            }            
+        }else  if(month==3||month==5){
+            if(day==31){
+                month++;
+                day=1;
+            }else{
+                day++;
+            }            
+        }else if(month==4||month==6){
+            if(day==30){
+                month++; 
+                day=1;
+            }else{
+                day++;
+            }
+        }
+        
+        }
+    }
+    
+    
+    // delete points
+    public static void target3(){
+        File father1=new File("D:\\Dropbox\\HighSampleClean\\");
+        //RamerDouglasPeuchkerAlgorithm r=new RamerDouglasPeuchkerAlgorithm(0.0005);
+        DeletePointTransformation d=new DeletePointTransformation();
+        File[] sun1=father1.listFiles();
+        File father2=new File("D:\\my file\\skeleton0005");
+        File[] sun2=father2.listFiles();
+        for(int i=0;i<sun1.length;i++){            
+        
+        try{
+            FileReader reader1=new FileReader(sun1[i]);
+            FileReader reader2=new FileReader(sun2[i]);
+            FileWriter writer=new FileWriter("D:\\my file\\delete3Point\\"+sun1[i].getName());
+            BufferedReader bf1=new BufferedReader(reader1);
+            BufferedReader bf2=new BufferedReader(reader2);
+            BufferedWriter bw=new BufferedWriter(writer);
+            
+             String s="";
+            ArrayList<Point> list1=new ArrayList<Point>();
+            while((s=bf1.readLine())!=null){
+                String[] segs=s.split(",");
+                assert(segs.length==4);
+                double x=Double.valueOf(segs[1]);
+                double y=Double.valueOf(segs[2]);
+                double[] xy=new double[]{x,y};
+                Point p=new Point(xy,segs[0]);
+                list1.add(p);
+            }
+            
+            ArrayList<Point> list2=new ArrayList<Point>();
+            while((s=bf2.readLine())!=null){
+                String[] segs=s.split(",");
+                assert(segs.length==4);
+                double x=Double.valueOf(segs[1]);
+                double y=Double.valueOf(segs[2]);
+                double[] xy=new double[]{x,y};
+                Point p=new Point(xy,segs[0]);
+                list2.add(p);
+            }
+            
+            ArrayList<Point> key=d.getTransformation(list1,list2);
+            for(int j=0;j<key.size();j++){
+                bw.write(key.get(j).timeString+","+key.get(j).coordinate[0]+","+key.get(j).coordinate[1]+"\n");
+            }           
+            reader1.close();
+            bf1.close();
+            reader2.close();
+            bf2.close();
+            bw.flush();
+            writer.flush();
+            bw.close();
+            writer.close();
+        }catch(Exception e){
+            System.out.println(e.toString());
+        }
+        }
+    }
+    
+    
+    
+    // add points
+    public static void target2(){
+        File father=new File("D:\\my file\\skeleton0005\\");
+        //RamerDouglasPeuchkerAlgorithm r=new RamerDouglasPeuchkerAlgorithm(0.0005);
+        AddPointsTransformation a=new AddPointsTransformation();
+        File[] sun=father.listFiles();
+        for(int i=0;i<sun.length;i++){            
+        
+        try{
+            FileReader reader=new FileReader(sun[i]);
+            FileWriter writer=new FileWriter("D:\\my file\\add5Point\\"+sun[i].getName());
+            BufferedReader bf=new BufferedReader(reader);
+            BufferedWriter bw=new BufferedWriter(writer);
+            
+             String s="";
+            ArrayList<Point> list=new ArrayList<Point>();
+            while((s=bf.readLine())!=null){
+                String[] segs=s.split(",");
+                assert(segs.length==4);
+                double x=Double.valueOf(segs[1]);
+                double y=Double.valueOf(segs[2]);
+                double[] xy=new double[]{x,y};
+                Point p=new Point(xy,segs[0]);
+                list.add(p);
+            }
+            ArrayList<Point> key=a.getTransformation(list);
+            for(int j=0;j<key.size();j++){
+                bw.write(key.get(j).timeString+","+key.get(j).coordinate[0]+","+key.get(j).coordinate[1]+"\n");
+            }           
+            reader.close();
+            bf.close();
+            bw.flush();
+            writer.flush();
+            bw.close();
+            writer.close();
+        }catch(Exception e){
+            
+        }
+        }
+    }
+    
+    
+    //get skeleton;
+    public static void target1(){
+        File father=new File("D:\\Dropbox\\similartiy function survey\\high sample trajectory\\HighSampleClean");
+        RamerDouglasPeuchkerAlgorithm r=new RamerDouglasPeuchkerAlgorithm(0.0005);
+        File[] sun=father.listFiles();
+        for(int i=0;i<sun.length;i++){            
+        
+        try{
+            FileReader reader=new FileReader(sun[i]);
+            FileWriter writer=new FileWriter("D:\\my file\\skeleton0005\\"+sun[i].getName());
+            BufferedReader bf=new BufferedReader(reader);
+            BufferedWriter bw=new BufferedWriter(writer);
+            
+             String s="";
+            ArrayList<Point> list=new ArrayList<Point>();
+            while((s=bf.readLine())!=null){
+                String[] segs=s.split(",");
+                assert(segs.length==4);
+                double x=Double.valueOf(segs[1]);
+                double y=Double.valueOf(segs[2]);
+                double[] xy=new double[]{x,y};
+                Point p=new Point(xy,segs[0]);
+                list.add(p);
+            }
+            ArrayList<Point> key=r.getKeyPointArrayList(list);
+            for(int j=0;j<key.size();j++){
+                bw.write(key.get(j).timeString+","+key.get(j).coordinate[0]+","+key.get(j).coordinate[1]+"\n");
+            }           
+            reader.close();
+            bf.close();
+            bw.flush();
+            writer.flush();
+            bw.close();
+            writer.close();
+        }catch(Exception e){
+            
+        }
+        }
+    }
+    
+    
+    //previous main
+    //
+    //
+    /*File father=new File("D:\\Dropbox\\similartiy function survey\\high sample trajectory\\MatchHighData65\\MatchHighData65");
+        
+        File[] sun=father.listFiles();
+        for(int i=0;i<sun.length;i++){            
+        
+        try{
+            FileReader reader=new FileReader(sun[i]);
+            FileWriter writer=new FileWriter("D:\\Dropbox\\similartiy function survey\\high sample trajectory\\HighSampleCleanS\\"+sun[i].getName()+".txt");
+            BufferedReader bf=new BufferedReader(reader);
+            BufferedWriter bw=new BufferedWriter(writer);
+            String line="";
+            String seg="";
+            while((line=bf.readLine())!=null){
+                if(line.startsWith("#")){
+                    if(seg.compareToIgnoreCase(line)==0){
+                        
+                    }else{
+                        line=line.replace(',', ' ').replace("#", "").substring(0,18);
+                        bw.flush();
+                        writer.flush();
+                        
+                        bw.close();
+                        writer.close();
+                        writer=new FileWriter("D:\\Dropbox\\similartiy function survey\\high sample trajectory\\HighSampleClean\\"+line+".txt");
+                        bw=new BufferedWriter(writer);
+                    }
+                    seg=line;
+                }else{
+                    bw.write(line+"\n");
+                }
+            }
+            bw.flush();
+                        writer.flush();
+                        
+                        bw.close();
+                        writer.close();
+        }catch(Exception e){
+            
+        }
+        }
+     * 
+     * 
+     * 
+     * 
+     * 
+     * 
+     */
+}

@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repo/dketsurvey/!svn/ver/100/demoTarjectorySurvey/src/java/edu/uq/itee/transformation
+END
+test.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repo/dketsurvey/!svn/ver/71/demoTarjectorySurvey/src/java/edu/uq/itee/transformation/test.java
+END
+DeletePointTransformation.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repo/dketsurvey/!svn/ver/25/demoTarjectorySurvey/src/java/edu/uq/itee/transformation/DeletePointTransformation.java
+END
+RamerDouglasPeuchkerAlgorithm.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repo/dketsurvey/!svn/ver/20/demoTarjectorySurvey/src/java/edu/uq/itee/transformation/RamerDouglasPeuchkerAlgorithm.java
+END
+SynchronizedShiftTransformation.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repo/dketsurvey/!svn/ver/81/demoTarjectorySurvey/src/java/edu/uq/itee/transformation/SynchronizedShiftTransformation.java
+END
+WholeTrajectoryScaleTransformation.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repo/dketsurvey/!svn/ver/100/demoTarjectorySurvey/src/java/edu/uq/itee/transformation/WholeTrajectoryScaleTransformation.java
+END
+RandomShiftTransformation.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repo/dketsurvey/!svn/ver/96/demoTarjectorySurvey/src/java/edu/uq/itee/transformation/RandomShiftTransformation.java
+END
+TransformationInterface.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repo/dketsurvey/!svn/ver/25/demoTarjectorySurvey/src/java/edu/uq/itee/transformation/TransformationInterface.java
+END
+DifferentSampleArray.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repo/dketsurvey/!svn/ver/97/demoTarjectorySurvey/src/java/edu/uq/itee/transformation/DifferentSampleArray.java
+END
+WholeTrajectoryTranslationTransformation.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/repo/dketsurvey/!svn/ver/72/demoTarjectorySurvey/src/java/edu/uq/itee/transformation/WholeTrajectoryTranslationTransformation.java
+END
+AddPointsTransformation.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repo/dketsurvey/!svn/ver/81/demoTarjectorySurvey/src/java/edu/uq/itee/transformation/AddPointsTransformation.java
+END
+WholeTrajectoryRotationTransformation.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/repo/dketsurvey/!svn/ver/81/demoTarjectorySurvey/src/java/edu/uq/itee/transformation/WholeTrajectoryRotationTransformation.java
+END
+AddNoiseTransformation.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repo/dketsurvey/!svn/ver/98/demoTarjectorySurvey/src/java/edu/uq/itee/transformation/AddNoiseTransformation.java
+END

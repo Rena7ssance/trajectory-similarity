@@ -1,0 +1,55 @@
+package edu.uq.itee.distance;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class DTWDistanceCalculator implements SequenceDistanceCalculator
+{
+
+	
+    @Override
+		public double GetDistance(ArrayList<Point> r, ArrayList<Point> s)
+	{
+		if (r.size() > s.size() || r.size() < s.size())
+		{
+			int i = -1;
+		}
+		double[][] dist = new double[r.size() + 1][s.size() + 1];
+
+		// initialize the dynamic programming seeds
+		for (int i = 0, j = s.size(); i <= r.size(); ++i)
+		{
+			dist[i][j] = Double.MAX_VALUE;
+		}
+		for (int j = 0, i = r.size(); j <= s.size(); ++j)
+		{
+			dist[i][j] = Double.MAX_VALUE;
+		}
+		dist[r.size()][s.size()] = 0;
+
+		// state transition
+		EuclideanDistanceCalculator pdc = new EuclideanDistanceCalculator();
+		for (int i = r.size() - 1; i >= 0; --i)
+		{
+			for (int j = s.size() - 1; j >= 0; --j)
+			{
+				Point rp = r.get(i);
+				Point sp = s.get(j);
+				double edd = pdc.GetDistance(rp, sp);
+				double temp = edd
+				        + Math.min(dist[i + 1][j + 1],
+				                Math.min(dist[i + 1][j], dist[i][j + 1]));
+				dist[i][j] = temp;
+			}
+		}
+
+		return dist[0][0];
+	}
+
+	public String toString()
+	{
+		return "DTW";
+	}
+
+   
+}

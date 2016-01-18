@@ -1,0 +1,15 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package edu.uq.itee.transformation;
+import edu.uq.itee.distance.Point;
+import java.util.ArrayList;
+/**
+ *
+ * @author uqhsu1
+ */
+public interface TransformationInterface {
+    public ArrayList<Point> getTransformation(ArrayList<Point> list);
+    public ArrayList<Point> getTransformation(ArrayList<Point> list,ArrayList<Point> escapeList);
+}

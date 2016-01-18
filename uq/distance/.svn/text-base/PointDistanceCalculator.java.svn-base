@@ -1,0 +1,7 @@
+package edu.uq.itee.distance;
+
+public interface PointDistanceCalculator {
+
+	public double GetDistance(Point x, Point y);
+	
+}

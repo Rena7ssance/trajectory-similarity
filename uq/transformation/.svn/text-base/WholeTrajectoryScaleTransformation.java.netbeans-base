@@ -1,0 +1,103 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package edu.uq.itee.transformation;
+import edu.uq.itee.distance.Point;
+import java.util.ArrayList;
+/**
+ *
+ * @author uqhsu1
+ */
+public class WholeTrajectoryScaleTransformation implements TransformationInterface{
+   /*
+    double shiftRate=0.7;
+    double shiftDistance=0.0125;
+    double curve=60;
+    
+    public WholeTrajectoryTranslationTransformation(){}
+    public WholeTrajectoryTranslationTransformation(double ShiftRate,double ShiftDistance,double curve){
+        shiftRate=ShiftRate;
+        shiftDistance=ShiftDistance;
+        this.curve=curve;
+    }
+    
+    public ArrayList<Point> getTransformation(ArrayList<Point> list, ArrayList<Point> escapeList){return null;}
+    
+    public ArrayList<Point> getTransformation(ArrayList<Point> list){
+        ArrayList<Point> result=new ArrayList<Point>();
+        
+        
+        for(int i=0;i<list.size();i++){
+            
+            Point temp=getShiftPoint((Point)list.get(i),shiftDistance,curve);
+                
+        }
+        
+        return result;
+    }
+    
+    private Point getShiftPoint(Point p, double R,double C){
+        
+        double[] cosC=new double[p.dimension];
+        for(int i=0;i<cosC.length;i++){
+            cosC[i]=R*(Math.cos(C*i%31));
+        }
+        
+        double[] temp=new double[p.dimension];
+        for(int i=0;i<temp.length;i++){
+            temp[i]=p.coordinate[i]+cosC[i];
+        }
+        Point result=new Point(temp,p.timeString);
+        
+        return result;
+    }
+    */
+    //在时间维度上的缩放
+    double translation;
+    
+    public WholeTrajectoryScaleTransformation(){}
+    public WholeTrajectoryScaleTransformation(double timeRatio){
+        translation=timeRatio;
+    }
+    
+    public ArrayList<Point> getTransformation(ArrayList<Point> list, ArrayList<Point> escapeList){return null;}
+    
+    public ArrayList<Point> getTransformation(ArrayList<Point> list){
+        ArrayList<Point> result=new ArrayList<Point>();
+        long startTime=list.get(0).timeLong;
+        
+        assert(((Point)(list.get(0))).dimension==2);
+        
+        for(int i=0;i<list.size();i++){
+            if(i==0){
+                result.add((Point)list.get(i));
+            }else{
+                double timelong=(((Point)list.get(i)).timeLong-((Point)list.get(0)).timeLong)*translation+startTime;
+                //double lengthY=(list.get(i).coordinate[1]-list.get(0).coordinate[1])*reductionRatio;
+                //double[] cood=new double[]{((Point)list.get(0)).coordinate[0]+lengthX,((Point)list.get(0)).coordinate[1]+lengthY};
+                Point temp=new Point(list.get(i).coordinate,(long)timelong);
+                result.add(temp);
+            }
+        }
+        
+        return result;
+    }
+    
+    /*private Point getShiftPoint(Point p, double R,double C){
+        
+        double[] cosC=new double[p.dimension];
+        for(int i=0;i<cosC.length;i++){
+            cosC[i]=R*(Math.cos(C*i%31));
+        }
+        
+        double[] temp=new double[p.dimension];
+        for(int i=0;i<temp.length;i++){
+            temp[i]=p.coordinate[i]+cosC[i];
+        }
+        Point result=new Point(temp,p.timeString);
+        
+        return result;
+    }*/
+    
+}

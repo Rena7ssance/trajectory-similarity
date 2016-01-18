@@ -1,0 +1,9 @@
+package edu.uq.itee.distance;
+
+import java.util.*;
+
+public interface SequenceDistanceCalculator {
+
+	public double GetDistance(ArrayList<Point> r, ArrayList<Point> s);
+
+}
